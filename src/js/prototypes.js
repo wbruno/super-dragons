@@ -19,10 +19,10 @@ Element.prototype.delegate = function(eventName, elementSelector, cb) {
     var $this = evt.target;
 
     if ($this.is(elementSelector)) {
-      cb($this, evt);
+      cb.call($this, evt);
     }
     if ($this.parentNode.is(elementSelector)) {
-      cb($this.parentNode, evt);
+      cb.call($this.parentNode, evt);
     }
   });
 };

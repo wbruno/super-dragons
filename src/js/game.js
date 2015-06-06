@@ -13,9 +13,9 @@ var $playerMe = document.getElementById('player-me');
 $playerMe.delegate('click', '.card-info-item', onItemClick);
 
 
-function onItemClick($this, event) {
+function onItemClick(event) {
   event.stopPropagation();
-  var value = $this.getAttribute('data-info');
+  var value = this.getAttribute('data-info');
 
   socket.emit('turn', value);
 }
