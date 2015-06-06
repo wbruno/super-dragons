@@ -4,6 +4,9 @@ var socket = io.connect(SOCKET_SERVER);
 
 socket.on('turn', function(msg){
   console.log(msg);
+
+  var json = JSON.parse(msg);
+  console.log(json);
 });
 
 var $cardInfoItems = document.querySelectorAll('.card-info-item');
