@@ -38,7 +38,7 @@ body {
 }
 
 .back {
-  background-image: url('../images/logo.png');
+  background-image: url('../../images/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f8f8f8;
