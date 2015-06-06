@@ -1,6 +1,7 @@
 (function(window, document, undefined) {
   'use strict';
 
+  var $playerOpponent = document.getElementById('player-opponent');
   /**
    * privates
    */
@@ -10,6 +11,7 @@
     var value = this.getAttribute('data-info');
 
     _socket.emit('turn', value);
+    DragonAnimate.flip($playerOpponent.querySelector('.card'));
   };
 
   var DragonGame = {
