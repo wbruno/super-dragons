@@ -11,7 +11,7 @@ socket.on('turn', function(msg){
 
 var $cardInfoItems = document.querySelectorAll('.card-info-item');
 var $cardImgs = document.querySelectorAll('.card-img');
-var $backs = document.querySelectorAll('.back');
+var $backs = document.querySelectorAll('.card-back');
 
 $cardInfoItems = [].slice.call($cardInfoItems);
 $cardImgs = [].slice.call($cardImgs);

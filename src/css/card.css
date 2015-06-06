@@ -30,10 +30,10 @@ body {
   float: left;
 }
 
-.front, .back {
+.card-front, .card-back {
   box-sizing: border-box;
   border: 5px solid #000;
-  border-radius: 3px;
+  border-radius: 8px;
   padding: 10px 7px;
 }
 
@@ -54,6 +54,7 @@ body {
   background-color: #c5c3c8;
   height: 25px; line-height: 25px;
   padding: 0 10px;
+  cursor: pointer;
 }
 .card-info-value {
   float: right;

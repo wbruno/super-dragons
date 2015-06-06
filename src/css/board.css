@@ -1,0 +1,25 @@
+.content {
+  width: 700px;
+  margin: 0 auto;
+}
+#main {
+  background-color: #ededed;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.board-title {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.player:not(:last-child) {
+  float: left;
+}
+.player:last-child {
+  float: right;
+}
+.player-name {
+  text-align: center;
+  margin-bottom: 10px;
+}

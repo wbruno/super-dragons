@@ -32,7 +32,7 @@
 
 /* END: Accommodating for IE */
 
-.flip-container, .front, .back {
+.flip-container, .card-front, .card-back {
   width: 285px;
   height: 400px;
 }
@@ -53,7 +53,7 @@
   position: relative;
 }
 
-.front, .back {
+.card-front, .card-back {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -84,14 +84,14 @@
   left: 0;
 }
 
-.front {
+.card-front {
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   z-index: 2;
   background: #8a7b9a;
 }
 
-.back {
+.card-back {
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
@@ -104,7 +104,7 @@
   position: relative;
 }
 
-.vertical .back {
+.vertical .card-back {
   -webkit-transform: rotateX(180deg);
   -moz-transform: rotateX(180deg);
   -ms-transform: rotateX(180deg);
