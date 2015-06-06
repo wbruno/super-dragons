@@ -1,26 +1,12 @@
-var $cardImgs = document.querySelectorAll('.card-img');
-var $backs = document.querySelectorAll('.card-back');
+var $playerMe = document.getElementById('player-me');
 
-$cardImgs = [].slice.call($cardImgs);
-$backs = [].slice.call($backs);
+$playerMe.delegate('click', '.card-img', onImgClick);
+$playerMe.delegate('click', '.card-back', onImgClick);
 
-$cardImgs.forEach(function($img) {
-  $img.addEventListener('click', onImgClick);
-});
-$backs.forEach(function($img) {
-  $img.addEventListener('click', onImgClick);
-});
-
-function onImgClick(event) {
-  var $parent = parents(this, /flip-container/);
+function onImgClick($this, event) {
+  event.stopPropagation();
+  var $parent = $this.parents(/flip-container/);
 
   $parent.classList.toggle('hover');
 }
 
-function parents($element, parentSelector) {
-  $parent = $element;
-  while(!parentSelector.test($parent.className)) {
-    $parent = $parent.parentNode;
-  }
-  return $parent;
-}

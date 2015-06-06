@@ -3,24 +3,19 @@ const SOCKET_SERVER = "http://localhost:8080";
 var socket = io.connect(SOCKET_SERVER);
 
 socket.on('turn', function(msg){
-  console.log(msg);
+  console.log('msg', msg);
 
   var json = JSON.parse(msg);
-  console.log(json);
+  console.log('json', json);
 });
 
-var $cardInfoItems = document.querySelectorAll('.card-info-item');
+var $playerMe = document.getElementById('player-me');
+$playerMe.delegate('click', '.card-info-item', onItemClick);
 
 
-$cardInfoItems = [].slice.call($cardInfoItems);
-
-
-$cardInfoItems.forEach(function($item) {
-  $item.addEventListener('click', onItemClick);
-});
-
-function onItemClick(event) {
-  var value = this.getAttribute('data-info');
+function onItemClick($this, event) {
+  event.stopPropagation();
+  var value = $this.getAttribute('data-info');
 
   socket.emit('turn', value);
 }

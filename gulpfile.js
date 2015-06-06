@@ -26,6 +26,7 @@ gulp.task('js', function() {
   gulp.src([
     js.source + '/vendor/*.js',
     js.source + '/templates/*.js',
+    js.source + '/prototypes.js',
     js.source + '/*.js'
     ])
     .pipe(concat("all.min.js"))
