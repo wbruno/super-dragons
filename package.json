@@ -4,6 +4,7 @@
   "description": "How cool is that? [Dragons API](https://github.com/wbruno/dragons-api)",
   "main": "",
   "scripts": {
+    "swig": "node_modules/swig/bin/swig.js compile templates/card.html --wrap-start='var cardTpl = ' > src/js/templates/card.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
     "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.1.0",
     "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4"
+    "gulp-util": "^3.0.4",
+    "swig": "^1.4.2"
   }
 }

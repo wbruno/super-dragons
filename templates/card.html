@@ -1,0 +1,22 @@
+<article class="card flip-container">
+  <div class="flipper">
+    <section class="card-front front">
+      <header class="card-header">
+        <span class="card-number">{{ number }}</span>
+        <h2 class="card-title">{{ name }}</h2>
+      </header>
+
+      <img src="images/default.png" class="card-img">
+
+      <ul class="card-info">
+      {% for info in infos %}
+        <li class="card-info-item" data-info='{ "skill": "{{ info.name }}", "value": "{{ info.value }}" }'>
+          {{ info.name }} <span class="card-info-value">{{ info.value }}</span>
+        </li>
+      {% endfor %}
+      </ul><!-- .card-info -->
+    </section>
+    <section class="card-back back">
+    </section><!-- .card-back -->
+  </div><!-- .flipper -->
+</article><!-- .flip-container -->
