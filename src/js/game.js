@@ -1,21 +1,26 @@
-const SOCKET_SERVER = "http://localhost:8080";
-// const SOCKET_SERVER = "https://dragons-api.herokuapp.com/";
-var socket = io.connect(SOCKET_SERVER);
+(function(window, document, undefined) {
+  'use strict';
 
-socket.on('turn', function(msg){
-  console.log('msg', msg);
+  const SOCKET_SERVER = "http://localhost:8080";
+  // const SOCKET_SERVER = "https://dragons-api.herokuapp.com/";
+  var socket = io.connect(SOCKET_SERVER);
 
-  var json = JSON.parse(msg);
-  console.log('json', json);
-});
+  socket.on('turn', function(msg){
+    console.log('msg', msg);
 
-var $playerMe = document.getElementById('player-me');
-$playerMe.delegate('click', '.card-info-item', onItemClick);
+    var json = JSON.parse(msg);
+    console.log('json', json);
+  });
+
+  var $playerMe = document.getElementById('player-me');
+  $playerMe.delegate('click', '.card-info-item', onItemClick);
 
 
-function onItemClick(event) {
-  event.stopPropagation();
-  var value = this.getAttribute('data-info');
+  function onItemClick(event) {
+    event.stopPropagation();
+    var value = this.getAttribute('data-info');
 
-  socket.emit('turn', value);
-}
+    socket.emit('turn', value);
+  }
+
+}(window, document));

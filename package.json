@@ -4,7 +4,8 @@
   "description": "How cool is that? [Dragons API](https://github.com/wbruno/dragons-api)",
   "main": "",
   "scripts": {
-    "swig": "node_modules/swig/bin/swig.js compile templates/card.html --wrap-start='var cardTpl = ' > src/js/templates/card.js",
+    "preswig": "node_modules/swig/bin/swig.js compile src/templates/card-flipped.html --wrap-start='var cardFlippedTpl = ' > src/js/templates/card-flipped.js",
+    "swig": "node_modules/swig/bin/swig.js compile src/templates/card.html --wrap-start='var cardTpl = ' > src/js/templates/card.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

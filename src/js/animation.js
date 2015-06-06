@@ -1,12 +1,16 @@
-var $playerMe = document.getElementById('player-me');
+(function(window, document, undefined) {
+  'use strict';
 
-$playerMe.delegate('click', '.card-img', onImgClick);
-$playerMe.delegate('click', '.card-back', onImgClick);
+  var $playerMe = document.getElementById('player-me');
 
-function onImgClick(event) {
-  event.stopPropagation();
-  var $parent = this.parents(/flip-container/);
+  $playerMe.delegate('click', '.card-img', onImgClick);
+  $playerMe.delegate('click', '.card-back', onImgClick);
 
-  $parent.classList.toggle('hover');
-}
+  function onImgClick(event) {
+    event.stopPropagation();
+    var $parent = this.parents(/flip-container/);
 
+    $parent.classList.toggle('hover');
+  }
+
+}(window, document));
