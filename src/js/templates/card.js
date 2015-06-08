@@ -2,7 +2,7 @@ var cardFunction = function (_swig,_ctx,_filters,_utils,_fn
 /**/) {
   var _ext = _swig.extensions,
     _output = "";
-_output += "<article class=\"card flip-container\">\n  <div class=\"flipper\">\n    <section class=\"card-front front\">\n      <header class=\"card-header\">\n        <span class=\"card-number\">";
+_output += "<article class=\"card flip-container is-flipped\">\n  <div class=\"flipper\">\n    <section class=\"card-front front\">\n      <header class=\"card-header\">\n        <span class=\"card-number\">";
 _output += _filters["e"]((((typeof _ctx.number !== "undefined" && _ctx.number !== null) ? ((typeof _ctx.number !== "undefined" && _ctx.number !== null) ? _ctx.number : "") : ((typeof number !== "undefined" && number !== null) ? number : "")) !== null ? ((typeof _ctx.number !== "undefined" && _ctx.number !== null) ? ((typeof _ctx.number !== "undefined" && _ctx.number !== null) ? _ctx.number : "") : ((typeof number !== "undefined" && number !== null) ? number : "")) : "" ));
 _output += "</span>\n        <h2 class=\"card-title\">";
 _output += _filters["e"]((((typeof _ctx.name !== "undefined" && _ctx.name !== null) ? ((typeof _ctx.name !== "undefined" && _ctx.name !== null) ? _ctx.name : "") : ((typeof name !== "undefined" && name !== null) ? name : "")) !== null ? ((typeof _ctx.name !== "undefined" && _ctx.name !== null) ? ((typeof _ctx.name !== "undefined" && _ctx.name !== null) ? _ctx.name : "") : ((typeof name !== "undefined" && name !== null) ? name : "")) : "" ));
@@ -10,7 +10,7 @@ _output += "</h2>\n      </header>\n\n      <img src=\"images/default.png\" clas
 (function () {
   var __l = (((typeof _ctx.infos !== "undefined" && _ctx.infos !== null) ? ((typeof _ctx.infos !== "undefined" && _ctx.infos !== null) ? _ctx.infos : "") : ((typeof infos !== "undefined" && infos !== null) ? infos : "")) !== null ? ((typeof _ctx.infos !== "undefined" && _ctx.infos !== null) ? ((typeof _ctx.infos !== "undefined" && _ctx.infos !== null) ? _ctx.infos : "") : ((typeof infos !== "undefined" && infos !== null) ? infos : "")) : "" ), __len = (_utils.isArray(__l) || typeof __l === "string") ? __l.length : _utils.keys(__l).length;
   if (!__l) { return; }
-    var _ctx__loopcache06870081985834986 = { loop: _ctx.loop, info: _ctx.info, __k: _ctx.__k };
+    var _ctx__loopcache004486676165834069 = { loop: _ctx.loop, info: _ctx.info, __k: _ctx.__k };
     _ctx.loop = { first: false, index: 1, index0: 0, revindex: __len, revindex0: __len - 1, length: __len, last: false };
   _utils.each(__l, function (info, __k) {
     _ctx.info = info;
@@ -29,10 +29,10 @@ _output += _filters["e"]((((typeof _ctx.info !== "undefined" && _ctx.info !== nu
 _output += "</span>\n        </li>\n      ";
     _ctx.loop.index += 1; _ctx.loop.index0 += 1; _ctx.loop.revindex -= 1; _ctx.loop.revindex0 -= 1;
   });
-  _ctx.loop = _ctx__loopcache06870081985834986.loop;
-  _ctx.info = _ctx__loopcache06870081985834986.info;
-  _ctx.__k = _ctx__loopcache06870081985834986.__k;
-  _ctx__loopcache06870081985834986 = undefined;
+  _ctx.loop = _ctx__loopcache004486676165834069.loop;
+  _ctx.info = _ctx__loopcache004486676165834069.info;
+  _ctx.__k = _ctx__loopcache004486676165834069.__k;
+  _ctx__loopcache004486676165834069 = undefined;
 })();
 _output += "\n      </ul><!-- .card-info -->\n    </section>\n    <section class=\"card-back back\">\n    </section><!-- .card-back -->\n  </div><!-- .flipper -->\n</article><!-- .flip-container -->\n";
 

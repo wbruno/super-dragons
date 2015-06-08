@@ -6,7 +6,9 @@
    */
   var _flip = function($element) {
     var $parent = $element.parents(/flip-container/);
-    $parent.classList.toggle('hover');
+    setTimeout(function() {
+      $parent.classList.toggle('is-flipped');
+    }, 200);
   };
   var _onImgClick = function(event) {
     event.stopPropagation();

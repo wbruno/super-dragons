@@ -21,7 +21,8 @@
   DragonRender.init($playerMe, $playerOpponent, firstCard);
   DragonAnimate.events($playerMe);
 
-  DragonGame.init(SOCKET_SERVER);
+  DragonGame.init();
+  DragonGame.socket(SOCKET_SERVER);
   DragonGame.events($playerMe);
 
 }(window, document));

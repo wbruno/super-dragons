@@ -23,3 +23,9 @@
   text-align: center;
   margin-bottom: 10px;
 }
+
+.card-info-item.is-active {
+  background-color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px #F6FF00
+}

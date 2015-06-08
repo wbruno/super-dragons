@@ -4,22 +4,15 @@
   /**
    * privates
    */
-  var _render = function($element, tpl, card) {
-    $element.innerHTML = swig.run(tpl, card);
-  }
 
   var DragonRender = {
     init: function($me, $opponent, firstCard) {
-      DragonRender.renderMe($me, firstCard);
-      DragonRender.renderOpponent($opponent, {})
+      DragonRender.render($me, firstCard);
+      DragonRender.render($opponent, {})
     },
 
-    renderMe: function($element, card) {
-      _render($element, cardFunction, card);
-    },
-
-    renderOpponent: function($element, card) {
-      _render($element, cardFlippedFunction, card);
+    render: function($element, card) {
+      $element.innerHTML = swig.run(cardFunction, card);
     }
   };
 
